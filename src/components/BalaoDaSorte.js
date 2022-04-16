@@ -19,14 +19,14 @@ export  const BalaoDaSorte = () =>{
         'Às vezes é melhor ficar quieto e deixar que pensem que você é um idiota, do que abrir a boca e não deixar nenhuma dúvida.'
     ];
 
-    const acao = () => {
+    const estourar = () => {
 
-        let num = Math.floor(Math.random() * (7 + 1))
+        let indice = Math.floor(Math.random() * (7 + 1))
         setImagem(require('../../assets/popped_balloon_red.jpg'))
-        setFrase(frases[num])
+        setFrase(frases[indice])
     }
 
-    const limpar = () => {
+    const resetar = () => {
         setImagem(require('../../assets/balloon_red.jpg'))
         setFrase('')
     }
@@ -41,7 +41,7 @@ export  const BalaoDaSorte = () =>{
 
                 color ='red'
                 title = 'estourar'
-                action = {acao}
+                action = {estourar}
 
             />
 
@@ -49,7 +49,7 @@ export  const BalaoDaSorte = () =>{
 
                 color = 'gray'
                 title = 'Resetar'
-                action = {limpar}
+                action = {resetar}
 
             />
         </View>
