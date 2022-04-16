@@ -20,8 +20,10 @@ export  const BalaoDaSorte = () =>{
     ];
 
     const acao = () => {
+
+        let num = Math.floor(Math.random() * (7 + 1))
         setImagem(require('../../assets/popped_balloon_red.jpg'))
-        setFrase(Math.floor(Math.random() * (7 + 1)))
+        setFrase(frases[num])
     }
 
     const limpar = () => {
@@ -33,7 +35,7 @@ export  const BalaoDaSorte = () =>{
         <View>
             <Image style={estilo.imagem} source={imagem}/>
 
-            <Text style ={estilo.paragraph}>{frases[frase]}</Text>
+            <Text style ={estilo.paragraph}>{frase}</Text>
 
             <Botao
 
