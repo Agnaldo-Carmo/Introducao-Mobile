@@ -4,11 +4,8 @@ import estilo from "../estilo";
 
 
 export const Botao = (props) => {
-
     return (
-
         <View style={estilo.botao}>
-
             <Button
                 color={props.color}
                 title={props.title}
@@ -16,8 +13,5 @@ export const Botao = (props) => {
             />
         </View>
     );
-
-
 }
-
 export default Botao;

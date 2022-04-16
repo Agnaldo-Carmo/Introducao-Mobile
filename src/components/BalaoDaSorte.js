@@ -1,13 +1,12 @@
 import * as React from 'react';
+import {useState} from 'react';
 import {Image, Text, View} from "react-native";
-import {useState} from "react";
 import Botao from "./Botao";
-import  estilo from "../estilo"
+import estilo from "../estilo";
 
-
-export  const BalaoDaSorte = () =>{
-    const [imagem, setImagem] = useState(require('../../assets/balloon_red.jpg'))
-    const [frase, setFrase] = useState('')
+export const BalaoDaSorte = () => {
+    const [imagem, setImagem] = useState(require('../../assets/balloon_red.jpg'));
+    const [frase, setFrase] = useState('');
 
     const frases = ['Grandezas em Pequenos Começos',
         'Melhor chegar atrasado neste mundo do que adiantado no outro',
@@ -20,41 +19,34 @@ export  const BalaoDaSorte = () =>{
     ];
 
     const estourar = () => {
-
-        let indice = Math.floor(Math.random() * (7 + 1))
-        setImagem(require('../../assets/popped_balloon_red.jpg'))
-        setFrase(frases[indice])
+        let indice = Math.floor(Math.random() * (7 + 1));
+        setImagem(require('../../assets/popped_balloon_red.jpg'));
+        setFrase(frases[indice]);
     }
 
     const resetar = () => {
-        setImagem(require('../../assets/balloon_red.jpg'))
-        setFrase('')
+        setImagem(require('../../assets/balloon_red.jpg'));
+        setFrase('');
     }
 
-    return(
+    return (
         <View>
             <Image style={estilo.imagem} source={imagem}/>
 
-            <Text style ={estilo.paragraph}>{frase}</Text>
+            <Text style={estilo.paragraph}>{frase}</Text>
 
             <Botao
-
-                color ='red'
-                title = 'estourar'
-                action = {estourar}
-
+                color='red'
+                title='estourar'
+                action={estourar}
             />
-
             <Botao
-
-                color = 'gray'
-                title = 'Resetar'
-                action = {resetar}
-
+                color='gray'
+                title='Resetar'
+                action={resetar}
             />
         </View>
-
     );
 }
 
-export  default  BalaoDaSorte;
+export default BalaoDaSorte;

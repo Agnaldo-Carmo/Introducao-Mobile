@@ -9,6 +9,7 @@ export default StyleSheet.create({
         backgroundColor: '#ecf0f1',
         padding: 8,
     },
+
     paragraph: {
         margin: 24,
         fontSize: 18,
@@ -18,7 +19,6 @@ export default StyleSheet.create({
     },
 
     imagem: {
-
         height: 300,
         width: 200,
         alignSelf: "center",
@@ -28,8 +28,5 @@ export default StyleSheet.create({
         width: 300,
         height: 50,
         alignSelf: 'center',
-
     }
-
-
 });
