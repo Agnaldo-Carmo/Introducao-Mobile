@@ -21,9 +21,9 @@ export  const BalaoDaSorte = () =>{
 
     const acao = () => {
 
-        let num = Math.floor(Math.random() * (7 + 1))
+        let indice = Math.floor(Math.random() * (7 + 1))
         setImagem(require('../../assets/popped_balloon_red.jpg'))
-        setFrase(frases[num])
+        setFrase(frases[indice])
     }
 
     const limpar = () => {
